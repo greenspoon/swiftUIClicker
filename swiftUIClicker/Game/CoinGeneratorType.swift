@@ -18,10 +18,9 @@
 //
 //  Removing this copyright statement is also a violation.
 
-import Foundation
 import UIKit
 
-enum Type: CaseIterable {
+enum CoinGeneratorType: Int, CaseIterable {
     case human
     case cat
     case dog
@@ -31,34 +30,34 @@ enum Type: CaseIterable {
     
     var name: String {
         switch self {
-        case .human: return "Human"
-        case .cat: return "Cat"
-        case .dog: return "Dog"
-        case .bird: return "Bird"
-        case .fish: return "Fish"
-        case .koala: return "Koala"
+        case .human: return Constants.Human.name
+        case .cat: return Constants.Cat.name
+        case .dog: return Constants.Dog.name
+        case .bird: return Constants.Bird.name
+        case .fish: return Constants.Fish.name
+        case .koala: return Constants.Koala.name
         }
     }
     
     var cost: Int {
         switch self {
-        case .human: return 100
-        case .cat: return 2000
-        case .dog: return 25_000
-        case .bird: return 30_000
-        case .fish: return 320_000
-        case .koala: return 4_000_000
+        case .human: return Constants.Human.cost
+        case .cat: return Constants.Cat.cost
+        case .dog: return Constants.Dog.cost
+        case .bird: return Constants.Bird.cost
+        case .fish: return Constants.Fish.cost
+        case .koala: return Constants.Koala.cost
         }
     }
     
     var earning: Int {
         switch self {
-        case .human: return 1
-        case .cat: return 10
-        case .dog: return 100
-        case .bird: return 150
-        case .fish: return 500
-        case .koala: return 1000
+        case .human: return Constants.Human.earning
+        case .cat: return Constants.Cat.earning
+        case .dog: return Constants.Dog.earning
+        case .bird: return Constants.Bird.earning
+        case .fish: return Constants.Fish.earning
+        case .koala: return Constants.Koala.earning
         }
     }
     
@@ -73,10 +72,4 @@ enum Type: CaseIterable {
         }
     }
     
-    var background: UIImage {
-        switch self {
-        case .human: return #imageLiteral(resourceName: "background")
-        case .cat, .dog, .bird, .fish, .koala: return #imageLiteral(resourceName: "grass")
-        }
-    }
 }

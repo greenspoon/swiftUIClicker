@@ -1,5 +1,5 @@
 //  
-//  CircleButton.swift
+//  SoundManager.swift
 //  swiftUIClicker
 //
 //  (c) Neofonie Mobile GmbH (2020)
@@ -18,28 +18,30 @@
 //
 //  Removing this copyright statement is also a violation.
 
-import SwiftUI
+import Foundation
+import AVFoundation
 
-struct CircleButton: View {
-    var action: () -> Void
+class SoundManager {
     
-    var body: some View {
-        Button(action: {
-            self.action()
-        }, label: {
-            Circle()
-                .foregroundColor(Color.green)
-                .padding(.horizontal, 15.0)
-        }).buttonStyle(CircleButtonStyle())
+    enum Sound: String {
+        case coin = "pickup"
+        case receive = "received"
+        case buy = "buy"
     }
-}
-
-struct CircleButtonStyle: ButtonStyle {
     
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration
-            .label
-            .scaleEffect(configuration.isPressed ? 0.4 : 1.0)
-            .animation(Animation.easeInOut(duration: 0.5))
+    private init() {}
+    
+    static let shared = SoundManager()
+    
+    var avPlayer: AVPlayer?
+    
+    func play(_ sound: Sound) {
+        guard let sound = Bundle.main.url(forResource: sound.rawValue, withExtension: "wav") else {
+            return
+        }
+        
+        avPlayer = AVPlayer(url: sound)
+        avPlayer?.play()
     }
+    
 }
