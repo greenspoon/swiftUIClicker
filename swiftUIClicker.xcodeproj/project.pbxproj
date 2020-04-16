@@ -16,7 +16,7 @@
 		735ACD682448231B00F35C3B /* ObjectBuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735ACD672448231B00F35C3B /* ObjectBuyView.swift */; };
 		735ACD6A2448233400F35C3B /* BuyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735ACD692448233400F35C3B /* BuyButton.swift */; };
 		735ACD6D2448245400F35C3B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735ACD6C2448245400F35C3B /* Game.swift */; };
-		735ACD6F2448258300F35C3B /* ObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735ACD6E2448258300F35C3B /* ObjectType.swift */; };
+		735ACD6F2448258300F35C3B /* CoinGeneratorContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735ACD6E2448258300F35C3B /* CoinGeneratorContainer.swift */; };
 		738923B32417DE820008265F /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738923B22417DE820008265F /* CircleButton.swift */; };
 		738923B924180B8D0008265F /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738923B824180B8D0008265F /* Objects.swift */; };
 		73A7F85E24180CFB0087BE4B /* CoinGeneratorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7F85D24180CFB0087BE4B /* CoinGeneratorType.swift */; };
@@ -27,7 +27,7 @@
 		73A7F869241AB1E20087BE4B /* buy.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73A7F868241AB1E20087BE4B /* buy.wav */; };
 		73CF5F22243249C900B7CE40 /* InformationOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CF5F21243249C900B7CE40 /* InformationOverlayView.swift */; };
 		73E36EC32420CFB6004A077F /* CoinUIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E36EC22420CFB6004A077F /* CoinUIKitViewController.swift */; };
-		73EE0A3B2448435200BA5570 /* SaveGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EE0A3A2448435200BA5570 /* SaveGame.swift */; };
+		73EE0A3C2448453800BA5570 /* SaveGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EE0A3A2448435200BA5570 /* SaveGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,7 @@
 		735ACD672448231B00F35C3B /* ObjectBuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectBuyView.swift; sourceTree = "<group>"; };
 		735ACD692448233400F35C3B /* BuyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButton.swift; sourceTree = "<group>"; };
 		735ACD6C2448245400F35C3B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		735ACD6E2448258300F35C3B /* ObjectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectType.swift; sourceTree = "<group>"; };
+		735ACD6E2448258300F35C3B /* CoinGeneratorContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGeneratorContainer.swift; sourceTree = "<group>"; };
 		738923B22417DE820008265F /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		738923B824180B8D0008265F /* Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
 		73A7F85D24180CFB0087BE4B /* CoinGeneratorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGeneratorType.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				73A7F85D24180CFB0087BE4B /* CoinGeneratorType.swift */,
 				735ACD6C2448245400F35C3B /* Game.swift */,
 				738923B824180B8D0008265F /* Objects.swift */,
-				735ACD6E2448258300F35C3B /* ObjectType.swift */,
+				735ACD6E2448258300F35C3B /* CoinGeneratorContainer.swift */,
 				73EE0A3A2448435200BA5570 /* SaveGame.swift */,
 			);
 			path = Game;
@@ -222,7 +222,7 @@
 				738923B32417DE820008265F /* CircleButton.swift in Sources */,
 				73A7F862241AA3FB0087BE4B /* SoundManager.swift in Sources */,
 				735ACD6D2448245400F35C3B /* Game.swift in Sources */,
-				735ACD6F2448258300F35C3B /* ObjectType.swift in Sources */,
+				735ACD6F2448258300F35C3B /* CoinGeneratorContainer.swift in Sources */,
 				73E36EC32420CFB6004A077F /* CoinUIKitViewController.swift in Sources */,
 				738923B924180B8D0008265F /* Objects.swift in Sources */,
 				734BAB6D23FED61D0099E1F1 /* AppDelegate.swift in Sources */,
@@ -231,7 +231,7 @@
 				73A7F86024193C160087BE4B /* Constants.swift in Sources */,
 				734BAB7123FED61D0099E1F1 /* ContentView.swift in Sources */,
 				735ACD6A2448233400F35C3B /* BuyButton.swift in Sources */,
-				73EE0A3B2448435200BA5570 /* SaveGame.swift in Sources */,
+				73EE0A3C2448453800BA5570 /* SaveGame.swift in Sources */,
 				73A7F85E24180CFB0087BE4B /* CoinGeneratorType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

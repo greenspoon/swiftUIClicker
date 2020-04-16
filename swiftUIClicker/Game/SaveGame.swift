@@ -98,7 +98,11 @@ class SaveGameStatus {
         
         if let containerData = read(.coinGeneratorContainers) as? Data,
             let coinGeneratorContainersWrappers = try? PropertyListDecoder().decode([CoinGeneratorContainerCodableWrapper].self, from: containerData) {
-            let containers = coinGeneratorContainersWrappers.compactMap { $0.container() }
+            let containers: [CoinGeneratorContainer] = coinGeneratorContainersWrappers.compactMap ({ wrapper in
+               let container = wrapper.container()
+                container?.objectTypeIsUnlocked = game
+                return container
+            })
             
             game.coinGeneratorContainers = containers
             

@@ -31,7 +31,7 @@ struct Constants {
     }
     
     struct Cat {
-        static let cost = 200
+        static let cost = 2000
         static let earning = 10
         static let name = "Cat"
     }
