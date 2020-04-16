@@ -49,7 +49,7 @@ class CoinGeneratorContainer: Identifiable, ObservableObject, CustomStringConver
     }
     
     func canBuy(with coins: Int) -> Bool {
-        let canBuy = coins >= type.cost +
+        let canBuy = coins >= type.cost
         if canBuy {
             isLocked = false
         }
