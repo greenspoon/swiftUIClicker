@@ -33,38 +33,37 @@ struct ContentView: View {
     }
     
     var body: some View {
-        
-        VStack {
             VStack {
-                Text(game.coins.description + " €")
-                    .font(.system(size: 35))
-                CircleButton {
-                    SoundManager.shared.play(.coin)
-                    self.game.addCoin()
+                VStack {
+                    Text(game.coins.description + " €")
+                        .font(.system(size: 35))
+                    CircleButton {
+                        SoundManager.shared.play(.coin)
+                        self.game.addCoin()
+                    }
+                }.padding().background(Color.clear)
+                
+                //This creates an inset which can't be configured
+                //            List(self.game.objects) { object in
+                //                ObjectBuyView(objectType: object)
+                //            }
+                
+                //I had to do it like this
+                List {
+                    ForEach(self.game.coinGeneratorContainers) { object in
+                        ObjectBuyView(objectType: object)
+                            .listRowInsets(EdgeInsets())
+                    }
                 }
-            }.padding().background(Color.clear)
-            
-            //This creates an inset which can't be configured
-//            List(self.game.objects) { object in
-//                ObjectBuyView(objectType: object)
-//            }
-            
-            //I had to do it like this
-            List {
-                ForEach(self.game.coinGeneratorContainers) { object in
-                    ObjectBuyView(objectType: object)
-                        .listRowInsets(EdgeInsets())
-                }
+                .padding(.top, 100)
+                
             }
-            .padding(.top, 100)
-        
-        }
-        .background(
-            Image("money")
-                .resizable()
-                .scaledToFill()
-                .blur(radius: 5)
-                .edgesIgnoringSafeArea(.all))
+            .background(
+                Image("money")
+                    .resizable()
+                    .scaledToFill()
+                    .blur(radius: 5)
+                    .edgesIgnoringSafeArea(.all))
     }
     
 }

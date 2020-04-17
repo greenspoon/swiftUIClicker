@@ -74,7 +74,7 @@ struct FallingCoin: View {
             .frame(width: 40, height: 40)
             .modifier(FallEffect(x: isFalling ? randomX : 0, y: isFalling ? UIScreen.main.bounds.height : 0))
             .onAppear {
-                withAnimation(Animation.easeIn(duration: 1.0).delay(0.0)) {
+                withAnimation(Animation.easeIn(duration: 1.0)) {
                     self.isFalling.toggle()
                     print("is falling")
                 }

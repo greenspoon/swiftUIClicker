@@ -39,12 +39,13 @@ struct BuyButton: View {
                     .padding()
                 
                 Text("\(objectType.type.cost) €").font(.system(Font.TextStyle.headline))
+                if !objectType.isLocked {
+                    Text("\(objectType.type.earning)x\(objectType.objects.count)=\(objectType.earnPerSecond)").font(Font.system(size: 12)).foregroundColor(Color.gray)
+                }
             }
             .padding()
-            .background(Color.yellow)
             .foregroundColor(Color.black)
-            .aspectRatio(contentMode: .fill)
-            
+            .background(Color.yellow)
         })
         
     }
